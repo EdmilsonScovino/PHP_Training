@@ -10,14 +10,18 @@
         $a = isset($_GET["ano"])?$_GET["ano"]:1900;
         $i = date("Y") - $a;
         echo "Voce nasceu em $a e tera $i anos"
-        if($i >=18){
-            $v = "Já pode Votar";
-            $d = "Já pode Dirigir";
+        if($i >=16){
+            $tipoVoto = "nao vota";
         }else{
-            $v = "N pode Votar";
-            $d = "N pode Dirigir";
+            if($i >= 16 && $i <8){
+                $tipoVoto = "voto opcional";
+
+            }
+            else{
+                $tipoVoto = "voto obrigatorio";
+            }
         } 
-        echo "Com essa idade você $v e tambem $d";
+        echo "Para essa idade, $tipoVoto";
     
     ?>
     
