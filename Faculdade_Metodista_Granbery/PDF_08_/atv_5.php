@@ -8,25 +8,27 @@
     echo "TECNICO (COD = 1)<br>";
     echo "GERENTE (COD = 2)<br> ";
     echo "FUNCIONARIO (COD = 3)<br>";
-    $cargo = fgets (handle: STDIN length: 1024);
-    echo "$cargo";
 
-    echo "Digite o seu salário:<br>";
-    $salario = fgets ( handle: STDIN length:1024);
-    echo "$salario";
+    $cargo = $_GET["cargo"];
+    echo "Cargo Atual: $cargo<br>";
+
+    echo "Digite o seu salário: ";
+    $salario = $_GET["salario"];
+    echo "$salario<br>";
 
     switch($cargo){
         case '1':
-            $aumento = $salario * 0.50;
-            echo "Novo salario $aumento";
-        
+            $salario = $salario + ($salario * 0.50);            
+            echo "Novo salario: $salario";
+        break;
         case '2':
-            $aumento = $salario * 0.30;
-            echo "Novo salario $aumento";
-        
+            $salario = $salario + ($salario * 0.30);
+            echo "Novo salario: $salario";
+        break;
         case '3':
-            $aumento = $salario * 0.20;
-            echo "Novo salario $aumento";
+            $salario = $salario + ($salario * 0.20);
+            echo "Novo salario: $salario";
+        break;
     }
 
 
