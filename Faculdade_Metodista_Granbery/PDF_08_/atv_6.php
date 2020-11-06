@@ -3,9 +3,9 @@
     e imprimir uma das mensagens: se idade < 13: Criança, se 13 idade < 20: Adolescente,
      se 20 idade < 60: Adulto e se idade 60: Idoso.*/
      
-     echo "Digite sua idade";
-     $idade = fgets (handle: STDIN, lenght:1024);
-
+     echo "Digite sua idade<br>";
+     $idade = $_GET["idade"];
+    
      if($idade < 13){
          echo "Criança";
      }elseif($idade = 13 < 20){
@@ -17,11 +17,5 @@
          echo "Idoso";
      }
      
-
-
-
-
-
-
 
 ?>
